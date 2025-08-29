@@ -67,7 +67,7 @@
     "attackStrength": 3,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.5,
+    "movementSpeed": 0.19999999999999998,
     "stepHeight": 0.6,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
@@ -120,6 +120,9 @@
       "value": ""
     },
     "entityDataEntries": [],
+    "whenMobDies": {
+      "name": "TrollerCreeperDies"
+    },
     "whenMobIsHurt": {
       "name": "TrollerCreeperHurtProcedure"
     },

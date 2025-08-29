@@ -26,6 +26,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 import com.troller.horizonzero.procedures.TrollerCreeperHurtProcedureProcedure;
+import com.troller.horizonzero.procedures.TrollerCreeperDiesProcedure;
 import com.troller.horizonzero.init.HorizonZeroModEntities;
 
 public class TrollerCreeperEntity extends Monster {
@@ -76,13 +77,19 @@ public class TrollerCreeperEntity extends Monster {
 		return super.hurtServer(level, damagesource, amount);
 	}
 
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		TrollerCreeperDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+	}
+
 	public static void init(RegisterSpawnPlacementsEvent event) {
 		event.register(HorizonZeroModEntities.TROLLER_CREEPER.get(), SpawnPlacementTypes.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.5);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.2);
 		builder = builder.add(Attributes.MAX_HEALTH, 20);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
