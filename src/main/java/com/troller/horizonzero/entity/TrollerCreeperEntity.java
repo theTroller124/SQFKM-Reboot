@@ -34,6 +34,7 @@ public class TrollerCreeperEntity extends Monster {
 		super(type, world);
 		xpReward = 5;
 		setNoAi(false);
+		setPersistenceRequired();
 	}
 
 	@Override
@@ -46,6 +47,11 @@ public class TrollerCreeperEntity extends Monster {
 		this.goalSelector.addGoal(5, new PanicGoal(this, 1.2));
 		this.goalSelector.addGoal(6, new EatBlockGoal(this));
 		this.goalSelector.addGoal(7, new MoveBackToVillageGoal(this, 0.6, false));
+	}
+
+	@Override
+	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
+		return false;
 	}
 
 	@Override

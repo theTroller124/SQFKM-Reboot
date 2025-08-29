@@ -15,11 +15,10 @@ public class TrollerCreeperHurtProcedureProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		boolean ishurt = false;
 		if (!Screen.hasShiftDown()) {
+			entity.getPersistentData().putBoolean("IsHurt", true);
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 50, 1, false, false));
-			ishurt = true;
 			HorizonZeroMod.queueServerWork(50, () -> {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 7, 100, false, false));
