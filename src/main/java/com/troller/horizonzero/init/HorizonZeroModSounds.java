@@ -14,7 +14,7 @@ import com.troller.horizonzero.HorizonZeroMod;
 
 public class HorizonZeroModSounds {
 	public static final DeferredRegister<SoundEvent> REGISTRY = DeferredRegister.create(Registries.SOUND_EVENT, HorizonZeroMod.MODID);
+	public static final DeferredHolder<SoundEvent, SoundEvent> TROLLER_CREEPER_HURT = REGISTRY.register("troller_creeper_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("horizon_zero", "troller_creeper_hurt")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> TROLLER_CREEPER_TROLLING = REGISTRY.register("troller_creeper_trolling",
 			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("horizon_zero", "troller_creeper_trolling")));
-	public static final DeferredHolder<SoundEvent, SoundEvent> TROLLER_CREEPER_HURT = REGISTRY.register("troller_creeper_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("horizon_zero", "troller_creeper_hurt")));
 }

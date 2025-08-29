@@ -1,17 +1,17 @@
 {
+  "troller_creeper_hurt": {
+    "sounds": [
+      {
+        "name": "horizon_zero:troller_creeper_hurt",
+        "stream": false
+      }
+    ]
+  },
   "troller_creeper_trolling": {
     "subtitle": "subtitles.troller_creeper_trolling",
     "sounds": [
       {
         "name": "horizon_zero:troller_creeper_trolling",
-        "stream": false
-      }
-    ]
-  },
-  "troller_creeper_hurt": {
-    "sounds": [
-      {
-        "name": "horizon_zero:troller_creeper_hurt",
         "stream": false
       }
     ]
