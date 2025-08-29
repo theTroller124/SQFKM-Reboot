@@ -1,18 +1,5 @@
 {
-  "mod_elements": [
-    {
-      "name": "Test",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "test",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/horizon_zero/recipe/test.json"
-        ]
-      }
-    }
-  ],
+  "mod_elements": [],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {},
@@ -45,16 +32,17 @@
   "workspaceSettings": {
     "modid": "horizon_zero",
     "modName": "Horizon Zero",
-    "version": "1.0.0",
-    "author": "MCreator",
+    "version": "0.0.1",
+    "author": "the_troller124",
     "websiteURL": "https://mcreator.net",
-    "license": "Not specified",
+    "license": "GNU General Public License version 3 (GPLv3)",
     "serverSideOnly": false,
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "neoforge-1.21.4",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "com.troller.horizonzero"
   },
   "mcreatorVersion": 202500228610
