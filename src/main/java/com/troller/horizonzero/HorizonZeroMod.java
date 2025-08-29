@@ -25,6 +25,11 @@ import java.util.HashMap;
 import java.util.Collection;
 import java.util.ArrayList;
 
+import com.troller.horizonzero.init.HorizonZeroModTabs;
+import com.troller.horizonzero.init.HorizonZeroModSounds;
+import com.troller.horizonzero.init.HorizonZeroModItems;
+import com.troller.horizonzero.init.HorizonZeroModEntities;
+
 @Mod("horizon_zero")
 public class HorizonZeroMod {
 	public static final Logger LOGGER = LogManager.getLogger(HorizonZeroMod.class);
@@ -35,6 +40,11 @@ public class HorizonZeroMod {
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
+		HorizonZeroModSounds.REGISTRY.register(modEventBus);
+
+		HorizonZeroModItems.REGISTRY.register(modEventBus);
+		HorizonZeroModEntities.REGISTRY.register(modEventBus);
+		HorizonZeroModTabs.REGISTRY.register(modEventBus);
 
 		// Start of user code block mod init
 		// End of user code block mod init

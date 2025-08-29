@@ -1,18 +1,109 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "TrollerCreeperHurtProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troller_creeper_hurt_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/troller/horizonzero/procedures/TrollerCreeperHurtProcedureProcedure.java"
+        ]
+      },
+      "path": "~/Mobs/Neutral/Procedures"
+    },
+    {
+      "name": "TrollerCreeper",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troller_creeper",
+      "metadata": {
+        "files": [
+          "src/main/java/com/troller/horizonzero/entity/TrollerCreeperEntity.java",
+          "src/main/java/com/troller/horizonzero/client/renderer/TrollerCreeperRenderer.java",
+          "src/main/resources/data/horizon_zero/neoforge/biome_modifier/troller_creeper_biome_modifier.json",
+          "src/main/resources/assets/horizon_zero/items/troller_creeper_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs/Neutral"
+    }
+  ],
   "variable_elements": [],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "troller_creeper_trolling",
+      "files": [
+        "troller_creeper_trolling"
+      ],
+      "category": "neutral",
+      "subtitle": "Troller Creeper Trolling"
+    },
+    {
+      "name": "troller_creeper_hurt",
+      "files": [
+        "troller_creeper_hurt"
+      ],
+      "category": "ambient",
+      "subtitle": ""
+    }
+  ],
   "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
-    "en_us": {},
-    "ru_ru": {}
+    "en_us": {
+      "subtitles.troller_creeper_trolling": "Troller Creeper Trolling",
+      "item.horizon_zero.troller_creeper_spawn_egg": "Troller Creeper Spawn Egg",
+      "entity.horizon_zero.troller_creeper": "Troller Creeper",
+      "subtitles.troller_creeper_hurt": ""
+    },
+    "ru_ru": {
+      "subtitles.troller_creeper_trolling": "Troller Creeper Trolling",
+      "item.horizon_zero.troller_creeper_spawn_egg": "Troller Creeper Spawn Egg",
+      "entity.horizon_zero.troller_creeper": "Troller Creeper",
+      "subtitles.troller_creeper_hurt": ""
+    },
+    "uk_ua": {
+      "subtitles.troller_creeper_trolling": "Troller Creeper Trolling",
+      "item.horizon_zero.troller_creeper_spawn_egg": "Troller Creeper Spawn Egg",
+      "entity.horizon_zero.troller_creeper": "Troller Creeper",
+      "subtitles.troller_creeper_hurt": ""
+    }
   },
   "metadata": {
     "files": [
+      "src/main/java/com/troller/horizonzero/init/HorizonZeroModSounds.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/com/troller/horizonzero/init/HorizonZeroModTabs.java",
       "src/main/resources/pack.mcmeta",
-      "src/main/java/com/troller/horizonzero/HorizonZeroMod.java"
+      "src/main/resources/assets/horizon_zero/sounds.json",
+      "src/main/java/com/troller/horizonzero/HorizonZeroMod.java",
+      "src/main/java/com/troller/horizonzero/init/HorizonZeroModItems.java",
+      "src/main/java/com/troller/horizonzero/init/HorizonZeroModEntities.java",
+      "src/main/java/com/troller/horizonzero/init/HorizonZeroModEntityRenderers.java"
     ]
   },
   "foldersRoot": {
@@ -23,9 +114,27 @@
         "children": [
           {
             "name": "Neutral",
+            "children": [
+              {
+                "name": "Procedures",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Blocks",
+        "children": [
+          {
+            "name": "Ore",
             "children": []
           }
         ]
+      },
+      {
+        "name": "Items",
+        "children": []
       }
     ]
   },
