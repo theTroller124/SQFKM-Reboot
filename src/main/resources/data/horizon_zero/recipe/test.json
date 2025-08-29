@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b"
+  ],
+  "key": {
+    "a": "minecraft:waxed_copper_block",
+    "b": "minecraft:waxed_exposed_copper"
+  },
+  "result": {
+    "id": "minecraft:birch_sapling",
+    "count": 1
+  }
+}
